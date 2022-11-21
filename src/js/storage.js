@@ -16,4 +16,8 @@ const load = key => {
   }
 };
 
-export default { save, load };
+const remove = key => {
+  localStorage.removeItem(key);
+}
+
+export default { save, load, remove };
