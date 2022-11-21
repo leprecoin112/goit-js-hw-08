@@ -7,9 +7,7 @@ const VIDEO_PLAYER_KEY = 'videoplayer-current-time';
 const videoPlayerEl = document.querySelector('#vimeo-player');
 const player = new Player(videoPlayerEl);
 
-player.on('play', function () {
-  setCurrentTimePlay(storage.load(VIDEO_PLAYER_KEY));
-});
+setCurrentTimePlay(storage.load(VIDEO_PLAYER_KEY));
 
 player.on('timeupdate', throttle(currentTimePlay, 1000));
 
