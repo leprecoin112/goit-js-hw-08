@@ -39,8 +39,8 @@ function onWriteToStorageInput(e) {
 function readFromStorage() {
   const saveData = storage.load(FORM_STATE_KEY);
   if (saveData) {
-    refs.email.value = saveData.email;
-    refs.message.value = saveData.message;
+    refs.email.value = saveData.email ? saveData.email : '';
+    refs.message.value = saveData.message ? saveData.message : '';
     return saveData;
   }
 
